@@ -4,7 +4,7 @@ use indexnow_api::IndexNowApi;
 async fn test_sitemaps() {
     let api = IndexNowApi::new(
         "www.example.com",
-        "452aa38cc3fa4f7ea0893f6b371bc979",
+        "7be9fca90b3b4b039983fa8f06e03ee8",
     );
     let a = api.send_urls(vec![
       "https://www.example.com".to_string()
