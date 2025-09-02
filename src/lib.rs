@@ -31,11 +31,11 @@ impl IndexNowApi {
     }
 
 
-    pub async fn send_urls(&self, urls: Vec<String>) -> Result<(), GoogleApiError> {
+    pub async fn send_urls<T:ToString>(&self, urls: Vec<T>) -> Result<(), GoogleApiError> {
         HttpClient::post(
             format!("{}/IndexNow", self.search_engine).as_str(),
             SendData {
-                url_list: urls,
+                url_list: urls.iter().map(|q|q.to_string()).collect(),
                 host: self.host.to_string(),
                 key: self.key.to_string(),
                 key_location: self.key_location.clone(),
