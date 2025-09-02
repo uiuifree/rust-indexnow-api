@@ -1,6 +1,6 @@
 [package]
 name = "indexnow-api"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2024"
 
 authors = ["uiuifree"]
@@ -12,7 +12,7 @@ keywords = ["IndexNow", "SEO", "bing", "api"]
 
 repository = "https://github.com/uiuifree/rust-indexnow-api"
 [dependencies]
-reqwest = { version = "0.12.5", features = ["json"] }
+reqwest = { version = "0.12", features = ["json"] }
 #urlencoding = { version = "2.1.0" }
 # Json
 serde = { version = "1.0", features = ["derive"] }
